@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oneness Acupuncture Wellness Center</title>
+    <style>
+        :root {
+            --g: #173f35;
+            --s: #dfe9df;
+            --c: #f8f5ed;
+            --gold: #b28a43;
+            --ink: #24312c
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Noto Sans", sans-serif;
+            color: var(--ink);
+            background: var(--c);
+            line-height: 1.7
+        }
+
+        .cc{
+            color:#b28a43;
+        }
+
+        .cc1{
+            color:#b28a43;
+            font-weight:bolder;
+            font-size: larger;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 800px; /* Optional: Set a max width for your card */
+            aspect-ratio: 16 / 9; /* Maintains a modern responsive ratio */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: #f8f5edf5;
+            border-bottom: 1px solid #ddd8cd
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 14px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px
+        }
+
+        .logo {
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--g);
+            font-size: 14px
+        }
+
+        nav a {
+            color: var(--g);
+            text-decoration: none;
+            margin-left: 16px;
+            font-weight: 700;
+            font-size: 14px
+        }
+
+        .lang {
+            border: 1px solid var(--gold);
+            background: white;
+            color: var(--g);
+            border-radius: 20px;
+            padding: 6px 11px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 12px
+        }
+
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, rgba(178, 138, 67, .13) 0 16%, transparent 17%), linear-gradient(135deg, #f8f5ed, #e5eee5)
+        }
+
+        .hero-inner {
+            max-width: 900px;
+            margin: auto;
+            padding: 10px 10px
+        }
+
+        .yinyang {
+            font-size: 184px;
+            line-height: 1;
+            color: green
+        }
+
+        .eyebrow {
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 20px
+        }
+
+        h1 {
+            font-size: clamp(36px, 3vw, 68px);
+            line-height: 1.08;
+            color: var(--g);
+            margin: 12px 0
+        }
+
+        .tagline {
+            font-size: clamp(20px, 3vw, 28px);
+            color: #285b4d
+        }
+
+        .tamil {
+            font-size: 20px;
+            font-weight: 600
+        }
+
+        .elements {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 32px 0
+        }
+
+        .element {
+            padding: 8px 15px;
+            border: 1px solid #cdbd9c;
+            border-radius: 999px;
+            background: #ffffff99
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .primary {
+            background: var(--g);
+            color: white
+        }
+
+        .secondary {
+            border: 1px solid var(--g);
+            color: var(--g)
+        }
+
+        section {
+            padding: 78px 22px
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto
+        }
+
+        .title {
+            text-align: center;
+            color: var(--g);
+            font-size: 36px;
+            margin: 0 0 10px
+        }
+
+        .sub {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 38px;
+            color: #5b675f
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e0ddd4;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(23, 63, 53, .06)
+        }
+
+        .card h3 {
+            color: var(--g);
+            margin-top: 8px
+        }
+
+        .symbol {
+            font-size: 30px;
+            color: var(--gold)
+        }
+
+        .philosophy {
+            background: var(--s)
+        }
+
+        .quote {
+            max-width: 760px;
+            margin: 35px auto 0;
+            text-align: center;
+            font-size: 23px;
+            color: var(--g);
+            font-weight: 600
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: auto
+        }
+
+        details {
+            background: #fff;
+            border: 1px solid #ddd8cd;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 16px 20px
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--g)
+        }
+
+        .contact {
+            background: var(--g);
+            color: white
+        }
+
+        .contact .title,
+        .contact .sub {
+            color: white
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .contact-card {
+            border: 1px solid #ffffff40;
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center
+        }
+
+        footer {
+            text-align: center;
+            background: #102f28;
+            color: #dfe9df;
+            padding: 25px 20px;
+            font-size: 13px
+        }
+
+        @media(max-width:750px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            nav a {
+                margin: 0 10px 0 0
+            }
+
+            .grid,
+            .contact-grid {
+                grid-template-columns: 1fr
+            }
+
+            section {
+                padding: 60px 18px
+            }
+
+            .yinyang {
+                font-size: 72px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="logo">ONENESS ACUPUNCTURE WELLNESS CENTER</div>
+            <div>
+                <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+                <a href="#healers" data-en="About the Healers" data-ta="Healers பற்றி">About the Healers</a>
+                <a href="#faqs" data-en="Acupuncture FAQs" data-ta="அக்குபஞ்சர் கேள்விகள்">Acupuncture FAQs</a>
+                <a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a>
+                <button class="lang" id="langBtn" onclick="toggleLanguage()">தமிழ்</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <div class="eyebrow" data-en="Oneness Acupuncture Wellness Center" data-ta="ஒன்னெஸ் அக்குபஞ்சர் நல்வாழ்வு மையம்">Oneness Acupuncture Wellness Center</div>
+            <div class="yinyang">☯</div>
+            <h1 data-en="Balance • Harmony • Oneness" data-ta="சமநிலை • நல்லிணக்கம் • ஒற்றுமை">Balance • Harmony • Oneness</h1>
+            <div class="tagline" data-en="Cure for all diseases without Medicine" data-ta="ஆனைத்து நோய்களுக்கும் மருந்தில்லா மருத்துவம்">Cure for all diseases without Medicine</div>
+            <p class="tamil" data-en="A gentle approach towards balance in body, mind and life."
+                data-ta="உடல், மனம் மற்றும் வாழ்வில் சமநிலையை நோக்கிய மென்மையான அணுகுமுறை.">A gentle approach towards
+                balance in body, mind and life.</p>
+            <div class="elements">
+                <span class="element" data-en="🔥 Fire" data-ta="🔥 நெருப்பு">🔥 Fire</span><span class="element"
+                    data-en="🌍 Earth" data-ta="🌍 நிலம்">🌍 Earth</span><span class="element" data-en="💨 Air"
+                    data-ta="💨 காற்று">💨 Air</span><span class="element" data-en="💧 Water" data-ta="💧 நீர்">💧
+                    Water</span><span class="element" data-en="🌌 Space / Wood" data-ta="🌌 ஆகாயம் / மரம்">🌌 Space /
+                    Wood</span>
+            </div>
+            <div class="btns"><a class="btn primary" href="#contact" data-en="Book an Appointment"
+                    data-ta="முன்பதிவு செய்ய">Book an Appointment</a><a class="btn secondary" href="#faqs"
+                    data-en="Acupuncture FAQs" data-ta="அக்குபஞ்சர் கேள்விகள்">Acupuncture FAQs</a></div>
+        </div>
+    </section>
+
+    <section id="healers">
+        <div class="container">
+            <h2 class="title" data-en="About the Healers" data-ta="Healers பற்றி">About the Healers</h2>
+            <p class="sub" data-en="A gentle, individualized approach inspired by traditional healing philosophies."
+                data-ta="பாரம்பரிய மருத்துவ தத்துவங்களின் உத்வேகத்துடன், தனிநபருக்கேற்ற மென்மையான அணுகுமுறை.">A gentle,
+                individualized approach inspired by traditional healing philosophies.</p>
+            <div class="grid">
+                <article class="card">
+                    <div class="symbol">☯</div>
+                    <h3>AcuHealer M. Sathishkumar D.A.Sc., B.E.</h3>
+                    <p data-en="Classical Acupuncturist and an IT Professional living a medicine free healthy life for 3 years."
+                        data-ta="3 வருடங்களாக மருந்துகளற்ற ஆரோக்கியமான வாழ்க்கையை வாழ்ந்து வரும் ஒரு மரபுவழி அக்குபஞ்சர் மருத்துவ வல்லுநர் மற்றும் தகவல் தொழில்நுட்பத் துறை பணியாளர்.">
+                        Classical Acupuncturist and an IT Professional living a medicine free healthy life for 3 years.</p>
+                </article>
+                <article class="card">
+                    <div class="symbol">☯</div>
+                    <h3>AcuHealer P. Sharmila D.A.Sc., M.B.A.</h3>
+                    <p data-en="Classical Acupuncturist and well educated Home Maker living a medicine free healthy life for 3 years."
+                        data-ta="3 வருடங்களாக மருந்துகளற்ற ஆரோக்கியமான வாழ்க்கையை வாழ்ந்து வரும் ஒரு மரபுவழி அக்குபஞ்சர் மருத்துவ வல்லுநர் மற்றும் முதுகலை பட்டம் பெற்ற இல்லத்தரசி.">
+                        Classical Acupuncturist and well educated Home Maker living a medicine free healthy life for 3 years.</p>
+                </article>
+                <article class="card">
+                    <div class="symbol">∞</div>
+                    <h3 data-en="Our Philosophy" data-ta="எங்கள் தத்துவ அணுகுமுறை">Our Philosophy</h3>
+                    <p data-en="We identify the root cause of illness through inquiry, observation, and pulse diagnosis. By identifying the imbalance within the body's five elements, we provide treatment at a specific acupuncture point capable of restoring that balance."
+                        data-ta="நாங்கள் கேட்டரிதல், பார்த்தரிதல் மற்றும் நாடி பரிசோதனை மூலமாக நோய்க்கான காரணத்தைக் கண்டறிகிறோம். உடலின் ஐம்பூதங்களில் ஏற்படும் சமநிலையின்மையை அடையாளம் கண்டு, அதனைச் சீர்செய்யக்கூடிய ஒரு குறிப்பிட்ட அக்குபஞ்சர் புள்ளியில் சிகிச்சை அளிக்கிறோம்.">
+                        We draw inspiration from acupuncture, Yin-Yang balance, Five Element concepts and traditional
+                        Siddha perspectives.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <div class="container">
+            <h2 class="title" data-en="A Philosophy of Balance" data-ta="சமநிலையின் தத்துவம்">A Philosophy of Balance
+            </h2>
+            <p class="sub"
+                data-en="Different traditional systems use different philosophies to understand balance and wellbeing."
+                data-ta="சமநிலை மற்றும் நலவாழ்வைப் புரிந்துகொள்ள பல்வேறு பாரம்பரிய முறைகள் வெவ்வேறு தத்துவங்களை பயன்படுத்துகின்றன.">
+                Different traditional systems use different philosophies to understand balance and wellbeing.</p>
+            <div class="grid">
+                <article class="card">
+                    <div class="symbol">☯</div>
+                    <h3 data-en="Yin Yang Philosophy" data-ta="கரு உறு தத்துவம்">Yin Yang Philosophy</h3>
+                    <p data-en="If you realize Yin (the unmanifest source) and Yang (the physical form), you can understand everything in the universe. Both Yin and Yang are essentially one; we perceive them as two distinct states only to comprehend them fully. 
+                        Yin and Yang are not separate entities—Yin is unmanifested and subtle, while Yang appears as its outward physical form.
+                         No Yang exists without Yin, and Yin without Yang remains unmanifested because it lacks physical expression."
+                        data-ta="கரு உருவை உணர்ந்து கொண்டால் உலகில் அனைத்தையும் அறிந்து கொள்ள முடியும். கரு உரு  இரண்டும் ஒன்றுதான் முழுமையாக அதனை விளங்கிக் கொள்வதற்காக இரு தன்மைகளாக பிரித்து உணர்கிறோம். 
+                        கருவும் உருவும் வெவ்வேறானது அல்ல; கரு மறைவானது;  கருவின் வெளிப்புற வடிவமே உருவாக தோற்றமளிக்கிறது,
+                        கரு இல்லாத உரு இல்லை. உருவில்லாத கரு வடிவமற்றதாக இருப்பதால் வெளிப்படாது.
+                    ">
+                    If you realize Yin (the unmanifest source) and Yang (the physical form), you can understand everything in the universe. Both Yin and Yang are essentially one; we perceive them as two distinct states only to comprehend them fully. 
+                    Yin and Yang are not separate entities—Yin is unmanifested and subtle, while Yang appears as its outward physical form. 
+                    No Yang exists without Yin, and Yin without Yang remains unmanifested because it lacks physical expression..</p>
+                </article>
+                <article class="card">
+                    <div class="symbol">🔥🌍💨💧🌌</div>
+                    <h3 data-en="Five Elements Philosophy" data-ta="பஞ்ச பூதங்கள் தத்துவம்">Five Elements</h3>
+                    <p data-en="According to the principle 'As in the macrocosm, so in the microcosm' (what is in the universe is also within the body), every cell in our body functions based on the principles
+                     of the Five Elements. The five elements—Fire, Earth, Air, Water, and Space (Ether)—are always in a state of uniform movement and balance. 
+                     Diseases manifest in the body only when this natural equilibrium is disrupted."
+                        data-ta="அண்டத்தில் உள்ளதே பிண்டத்திலும் உள்ளது என்ற கோட்பாடின் படி நம் உடலில் உள்ள ஒவ்வொரு அணுக்களும் பஞ்சபூதங்களின் தத்துவத்தின் படி தான் செயல்படுகிறது. 
+                        பஞ்சபூதங்களான நெருப்பு, நிலம், காற்று, நீர் மற்றும் ஆதாயம் என்பன எப்பொழுதும் ஒரு சீரான இயக்கத்திலும் சமநிலையிலும் இருக்கின்றன. 
+                        இந்த சமநிலை கெடும்போது தான் உடலில் நோய்களும் உருவாகின்றன.">
+                        According to the principle 'As in the macrocosm, so in the microcosm' (what is in the universe is also within the body), every cell in our body functions based on the principles
+                     of the Five Elements. The five elements—Fire, Earth, Air, Water, and Space (Ether)—are always in a state of uniform movement and balance. 
+                     Diseases manifest in the body only when this natural equilibrium is disrupted.</p>
+                </article>
+                <article class="card">
+                    <div class="symbol">♻️</div>
+                    <h3 data-en="Morbid Elimination Philosophy" data-ta="கழிவு நீக்க தத்துவம்">Siddha Perspectives</h3>
+                    <p data-en="Due to our lifestyle of living against nature, morbids accumulate in our internal organs. 
+                        The accumulation of morbids is the disease; the elimination of morbids is the cure."
+                        data-ta="நம்முடைய இயற்கைக்கு மாறான வாழ்வியலால் நம் உடலில் உள் உறுப்புகளில் கழிவுகள் தேங்க ஆரம்பிக்கின்றன. 
+                        கழிவுகளின் தேக்கமே நோயாகும்; கழிவுகளின் நீக்கமே மருத்துவம் ஆகும்.">
+                        Due to our lifestyle of living against nature, morbids accumulate in our internal organs. 
+                        The accumulation of morbids is the disease; the elimination of morbids is the cure.</p>
+                </article>
+            </div>
+            <p class="quote" data-en="“Balance is not stillness. It is the harmony of continual change.”"
+                data-ta="“சமநிலை என்பது அசைவற்ற நிலை அல்ல; தொடர்ச்சியான மாற்றத்தின் நல்லிணக்கமே சமநிலை.”">“Balance is
+                not stillness. It is the harmony of continual change.”</p>
+        </div>
+    </section>
+
+    <section id="faqs">
+        <div class="container">
+            <h2 class="title" data-en="Acupuncture FAQs" data-ta="அக்குபஞ்சர் — அடிக்கடி கேட்கப்படும் கேள்விகள்">
+                Acupuncture FAQs</h2>
+            <p class="sub" data-en="Simple answers to common questions."
+                data-ta="பொதுவாக கேட்கப்படும் கேள்விகளுக்கான எளிய பதில்கள்.">Simple answers to common questions.</p>
+            <div class="faq">
+                <details>
+                    <summary data-en="What is Acupuncture?" 
+                             data-ta="அக்குபஞ்சர் என்றால் என்ன?">What is acupuncture?
+                    </summary>
+                    <p data-en="Acupuncture is an ancient medicine system that works on the energy body. Historical evidences exist dating as early as 2697-2596 B.C.E."
+                        data-ta="அக்குபஞ்சர் என்பது ஆற்றல் உடலின் (Energy body) அடிப்படையில் இயங்கும் ஒரு பண்டைய மருத்துவ முறையாகும். கி.மு. 2697-2596 காலக்கட்டத்திலேயே இதற்கான வரலாற்றுச் சான்றுகள் இருந்துள்ளன.">
+                       Acupuncture is an ancient medicine system that works on the energy body. Historical evidences exist dating as early as 2697-2596 B.C.E.</p>
+                </details>
+
+                <details>
+                    <summary data-en="What is Energy body?" 
+                             data-ta="ஆற்றல் உடல் என்றால் என்ன?">What is Energy body?
+                    </summary>
+                    <p data-en="Human body has different layers as Physical body, Chemical body and Energy body. Any changes in the energy body reflect in the Chemical body and Physical body, the vice versa also holds true. 
+                        The physical body is body that we can see with our bare eyes. The Chemical body is also visible based on the chemicals and hormones of the body, 
+                        it is also subtle as these chemicals and hormones manifest into our mind. Therefore, the chemical body can also be called as the mind body. 
+                        Energy body is invisible in nature, it is made up of energy flow through the channels and meridians on the surface of the body which are connected with our internal vital organs. 
+                        This energy has the characteristics of the five elements of the universe namely Fire, Earth, Air, Water and Space(termed as Wood in Acupuncture science)."
+                        data-ta="மனித உடலில் பருவுடல் (Physical body), வேதியியல் உடல் (Chemical body) மற்றும் ஆற்றல் உடல் (Energy body) என வெவ்வேறு அடுக்குகள் உள்ளன. 
+                                ஆற்றல் உடலில் ஏற்படும் எந்தவொரு மாற்றமும் வேதியியல் உடலிலும் பருவுடலிலும் எதிரொலிக்கும்; 
+                                இதன் தலைகீழ் செயல்பாடும் உண்மையே. பருவுடல் என்பது நாம் நமது வெறும் கண்களால் பார்க்கக்கூடிய உடலாகும். 
+                                வேதியியல் உடலும் உடலின் வேதிப்பொருட்கள் மற்றும் ஹார்மோன்களின் அடிப்படையில் பார்க்கக்கூடியதே; 
+                                இந்த வேதிப்பொருட்களும் ஹார்மோன்களும் நமது மனதாக வெளிப்படுவதால் இது நுட்பமானது. 
+                                எனவே, வேதியியல் உடலை 'மன உடல்' என்றும் அழைக்கலாம். 
+                                ஆற்றல் உடல் இயற்கையிலேயே கண்ணுக்குத் தெரியாதது; இது உடலின் மேற்பரப்பில் உள்ள சக்தி நாள பாதைகள் வழியாகப் பாயும் ஆற்றலால் ஆனது, 
+                                இவை நமது உள் உறுப்புகளுடன் இணைக்கப்பட்டுள்ளன. இந்த ஆற்றல் பிரபஞ்சத்தின் ஐந்து பூதங்களான நெருப்பு, நிலம், காற்று, நீர் மற்றும் ஆகாயம் (அக்குபஞ்சர் அறிவியலில் 'மரம்' எனக் குறிப்பிடப்படுகிறது) ஆகியவற்றின் தன்மைகளைக் கொண்டுள்ளது.">
+                        Human body has different layers as Physical body, Chemical body and Energy body. Any changes in the energy body reflect in the Chemical body and Physical body, the vice versa also holds true. 
+                        The physical body is body that we can see with our bare eyes. The Chemical body is also visible based on the chemicals and hormones of the body, 
+                        it is also subtle as these chemicals and hormones manifest into our mind. Therefore, the chemical body can also be called as the mind body. 
+                        Energy body is invisible in nature, it is made up of energy flow through the channels and meridians on the surface of the body which are connected with our internal vital organs. 
+                        This energy has the characteristics of the five elements of the universe namely Fire, Earth, Air, Water and Space(termed as Wood in Acupuncture science).</p>
+                </details>
+
+                <details>
+                    <summary data-en="What is a Disease?" 
+                             data-ta="நோய் என்றால் என்ன?">What is a Disease?
+                    </summary>
+                    <p data-en="Imbalance of the energy body is considered as the disease, the symptoms manifest in the chemical and physical bodies."
+                        data-ta="ஆற்றல் உடலில் ஏற்படும் சமநிலையின்மையே நோயாகக் கருதப்படுகிறது, 
+                                இதன் அறிகுறிகள் வேதியியல் மற்றும் பருவுடல்களில் வெளிப்படுகின்றன.">
+                        Imbalance of the energy body is considered as the disease, the symptoms manifest in the chemical and physical bodies.</p>
+                </details>
+
+                <details>
+                    <summary data-en="How is a disease diagnosed?" 
+                             data-ta="நோய் எவ்வாறு கண்டறியப்படுகிறது?">How is a disease diagnosed?
+                    </summary>
+                    <p data-en="Acupuncture doesn't rely on machines to diagnose human health. There's no need of any tests, scans or x-rays for diagnosing a disease. 
+                        Acupuncture uses human interactions, observations and pulse diagnosis to identify the imbalanced elements of the energy body."
+                        data-ta="மனித ஆரோக்கியத்தைக் கண்டறிய அக்குபஞ்சர் எவ்வித இயந்திரங்களையும் நம்பியிருப்பதில்லை. 
+                                நோயைக் கண்டறிய எந்தச் சோதனைகளும், ஸ்கேன்களோ அல்லது எக்ஸ்-ரேக்களோ தேவையில்லை. 
+                                ஆற்றல் உடலில் சமநிலையற்ற பஞ்சபூதக் கூறுகளைக் கண்டறிய அக்குபஞ்சர் மனித உரையாடல்கள், கூர்ந்து கவனித்தல் மற்றும் நாடிப் பரிசோதனையைப் பயன்படுத்துகிறது.">
+                        Acupuncture doesn't rely on machines to diagnose human health. There's no need of any tests, scans or x-rays for diagnosing a disease. 
+                        Acupuncture uses human interactions, observations and pulse diagnosis to identify the imbalanced elements of the energy body.</p>
+                </details>
+
+                <details>
+                    <summary data-en="How is the treatment given?" 
+                             data-ta="சிகிச்சை எவ்வாறு அளிக்கப்படுகிறது?">How is the treatment given?
+                    </summary>
+                    <p data-en="Using the diagnostic methods, the practitioner identifies the imbalanced elements, the practitioner arrives at an accurate point on the surface of body which can treat the imbalance. The practitioner stimulates the point using a gentle touch or piercing with a fili form needle. 
+                        Once the energy body is set in balance, the chemical body and physical body also respond to the changes in the energy body. 
+                        Symptoms begin to subside, morbids are eliminated with ease and optimum health is restored."
+                        data-ta="நோயறிதல் முறைகளைப் பயன்படுத்தி, மருத்துவர் சமநிலையற்ற கூறுகளைக் கண்டறிந்து, அந்தச் சமநிலையின்மையைச் சரிசெய்யக்கூடிய உடலின் மேற்பரப்பில் உள்ள சரியான புள்ளியை அடைகிறார். 
+                        மருத்துவர் ஒரு மென்மையான தொடுதல் மூலமாகவோ அல்லது மெல்லிய ஊசியைச் செலுத்துவதன் மூலமாகவோ அந்தப் புள்ளியைத் தூண்டுகிறார். 
+                        ஆற்றல் உடல் சமநிலைக்கு வந்தவுடன், வேதியியல் உடலும் பருவுடலும் ஆற்றல் உடலின் மாற்றங்களுக்கு ஏற்பச் செயல்படுகின்றன. 
+                        அறிகுறிகள் குறையத் தொடங்குகின்றன, கழிவுகள் எளிதில் வெளியேற்றப்பட்டு, உகந்த ஆரோக்கியம் மீட்கப்படுகிறது.">
+                        Using the diagnostic methods, the practitioner identifies the imbalanced elements, the practitioner arrives at an accurate point on the surface of body which can treat the imbalance. The practitioner stimulates the point using a gentle touch or piercing with a fili form needle. 
+                        Once the energy body is set in balance, the chemical body and physical body also respond to the changes in the energy body. 
+                        Symptoms begin to subside, morbids are eliminated with ease and optimum health is restored.</p>
+                </details>
+
+                <details>
+                    <summary data-en="How many treatments would be required?" 
+                             data-ta="எத்தனை சிகிச்சைகள் தேவைப்படும்?">How many treatments would be required?
+                    </summary>
+                    <p data-en="For acute conditions, cure is felt within 2-4 sittings. While for chronic conditions, permanent cure can be achieved in 3-4 months. To be honest, definite timelines cannot be given as condition of each body would vary. 
+                        However, we can guarantee that the curing process would definitely start after taking the first time treatment itself."
+                        data-ta="திடீரென ஏற்படும் பாதிப்புகளுக்கு (Acute conditions), 2-4 அமர்வுகளிலோ அல்லது அதற்கு முன்னதாகவோ குணம் தெரியும். 
+                                நாள்பட்ட நோய்களுக்கு (Chronic conditions), 3-6 மாதங்களிலோ அல்லது அதற்கு முன்னதாகவோ நிரந்தரக் குணம் அடைய முடியும். 
+                                நேர்மையாகச் சொன்னால், ஒவ்வொரு உடலின் நிலையும் மாறுபடும் என்பதால் உறுதியான காலக்கெடுவைக் கொடுக்க முடியாது. 
+                                இருப்பினும், முதல் முறை சிகிச்சை எடுத்தவுடனேயே குணமடையும் செயல்முறை நிச்சயமாகத் தொடங்கிவிடும் என்று எங்களால் உத்தரவாதம் அளிக்க முடியும்.">
+                        For acute conditions, cure is felt within 2-4 sittings or ealier. While for chronic conditions, permanent cure can be achieved in 3-4 months or earlier. 
+                        To be honest, definite timelines cannot be given as condition of each body would vary. However, we can guarantee that the curing process would definitely start after taking the first time treatment itself. 
+                    </p>
+                </details>
+
+                <details>
+                    <summary data-en="What is a sitting?" 
+                             data-ta="ஒரு 'அமர்வு' என்றால் என்ன?">What is a sitting?
+                    </summary>
+                    <p data-en="Sitting is an appointment with your practitioner where the current elemental imbalance is diagnosed and treatment is given. There should be 7 to 10 days between sittings. 
+                        In some severe cases, additional sitting can be taken after 3 days."
+                        data-ta="அமர்வு என்பது உங்கள் மருத்துவருடனான ஒரு சந்திப்பாகும், அங்கு தற்போதைய பஞ்சபூதச் சமநிலையின்மை கண்டறியப்பட்டு சிகிச்சை அளிக்கப்படுகிறது. 
+                                அமர்வுகளுக்கு இடையே 7 முதல் 10 நாட்கள் இடைவெளி இருக்க வேண்டும். 
+                                சில கடுமையான பாதிப்புகளில், 3 நாட்களுக்குப் பிறகு கூடுதல் அமர்வு எடுத்துக்கொள்ளலாம்.">
+                        Sitting is an appointment with your practitioner where the current elemental imbalance is diagnosed and treatment is given. There should be 7 to 10 days between sittings. 
+                        In some severe cases, additional sitting can be taken after 3 days.</p>
+                </details>
+
+                <details>
+                    <summary data-en="What diseases can be cured by Acupuncture?" 
+                             data-ta="அக்குபஞ்சர் மூலம் எந்தெந்த நோய்களைக் குணப்படுத்த முடியும்?">What diseases can be cured by Acupuncture?
+                    </summary>
+                    <p data-en="Acupuncture has the potential of curing all the diseases. Every disease can be related to the five elemental imbalance. 
+                        Patience, Faith and perseverance are the key to success."
+                        data-ta="அனைத்து நோய்களையும் குணப்படுத்தும் ஆற்றல் அக்குபஞ்சருக்கு உண்டு. 
+                                ஒவ்வொரு நோயையும் பஞ்ச பூதங்களின் சமநிலையின்மையோடு தொடர்புபடுத்த முடியும். 
+                                பொறுமை, நம்பிக்கை மற்றும் விடாமுயற்சியே வெற்றிக்கு வழிவகுக்கும்.">
+                        Acupuncture has the potential of curing all the diseases. Every disease can be related to the five elemental imbalance. 
+                        Patience, Faith and perseverance are the key to success.</p>
+                </details>
+
+                <details>
+                    <summary data-en="Are there any food restrictions for Acupuncture?"
+                             data-ta="அக்குபஞ்சர் சிகிச்சைக்கு ஏதேனும் உணவுக் கட்டுப்பாடுகள் உள்ளதா?">Are there any food restrictions for Acupuncture?
+                    </summary>
+                    <p data-en="There are no food restrictions recommended by Acupuncture. You should refrain from bad habits like Smoking, Consuming Alcohol or any kind of intoxications."
+                        data-ta="அக்குபஞ்சரால் பரிந்துரைக்கப்படும் உணவுக் கட்டுப்பாடுகள் எதுவும் இல்லை. புகைபிடித்தல், மது அருந்துதல் அல்லது எந்தவொரு போதைப் பழக்கங்களிலிருந்தும் நீங்கள் விலகி இருக்க வேண்டும்.">
+                        There are no food restrictions recommended by Acupuncture. You should refrain from bad habits like Smoking, Consuming Alcohol or any kind of intoxications.</p>
+                </details>
+
+                <details>
+                    <summary data-en="Can I take Acupuncture treatment along side my Allopathy medication?"
+                             data-ta="எனது ஆங்கில மருத்துவத்துடன் (Allopathy) சேர்த்து அக்குபஞ்சர் சிகிச்சையையும் எடுத்துக்கொள்ளலாமா?">Can I take Acupuncture treatment along side my Allopathy medication?
+                    </summary>
+                    <p data-en="It is strictly advised to refrain from Allopathy medication as they suppress the morbids that Acupuncture tries to eliminate."
+                        data-ta="கண்டிப்பாக ஆங்கில மருத்துவத்தை தவிர்ப்பது நல்லது, ஏனெனில் அக்குபஞ்சர் வெளியேற்ற முயலும் கழிவுகளை ஆங்கில மருந்துகள் அடக்கி வைக்கின்றன.">
+                        It is strictly advised to refrain from Allopathy medication as they suppress the morbids that Acupuncture tries to eliminate.</p>
+                </details>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="title" data-en="Contact Us" data-ta="எங்களை தொடர்பு கொள்ளுங்கள்">Contact Us</h2>
+            <p class="sub" data-en="We would be happy to hear from you."
+                data-ta="உங்களை வரவேற்கிறோம். எங்களை தொடர்பு கொள்ளுங்கள்.">We would be happy to hear from you.</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="symbol">🕒</div>
+                    <h3 data-en="Consulting Hours" data-ta="பார்வை நேரம்">Call</h3>
+                    <div class="cc">
+                        <p><b>Mon to Fri, 6:30 PM to 8 PM</b></p>
+                        <p>For other timings, please call up</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="symbol">☎</div>
+                    <h3 data-en="Contact / WhatsApp #" data-ta="தொலைபேசி / வாட்ஸ்அப் #">Call</h3>
+                    <div class="cc1"><p>+91-79044-98974</p></div>
+                </div>
+                <div class="contact-card">
+                    <div class="symbol">🌐</div>
+                    <h3 data-en="Location" data-ta="இருப்பிடம்">Location</h3>
+                    <div class="cc">
+                        <p>No 9/34, Reddy 1st Street,
+                            Ekkatuthangal, Chennai 600032.
+                        </p>
+                        <a href="https://maps.app.goo.gl/pjQw2nw7GVMMLmiU9" target="_blank">Google Map Location</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>© 2026 Oneness Acupuncture Wellness Center · Balance • Harmony • Oneness</footer>
+    <script>
+        let lang = localStorage.getItem("onenessLang") || "en";
+        function apply() {document.documentElement.lang = lang; document.querySelectorAll("[data-en]").forEach(e => e.textContent = e.dataset[lang]); document.getElementById("langBtn").textContent = lang === "en" ? "தமிழ்" : "English"}
+        function toggleLanguage() {lang = lang === "en" ? "ta" : "en"; localStorage.setItem("onenessLang", lang); apply()} apply();
+    </script>
+</body>
+
+</html>
